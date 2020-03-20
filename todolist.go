@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"log"
 	"net/http"
 	"strings"
 )
@@ -124,9 +123,4 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	default:
 		fmt.Fprintf(w, "[ERROR] HTTP method not supported")
 	}
-}
-
-func main() {
-	http.HandleFunc("/todos/", handler)
-	log.Fatal(http.ListenAndServe(":9999", nil))
 }
