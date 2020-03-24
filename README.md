@@ -13,7 +13,7 @@ Retrieve all items of the list as "complete" or "pending".
 Retrieve the status of the \<task\>
 
 ## POST /todos/\<task\>
-Add yask to the pending list
+Add task to the pending list
 
 ## PATCH /todos/\<task\>
 Flips the status of the \<task\>
