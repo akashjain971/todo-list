@@ -11,9 +11,9 @@ import (
 )
 
 type todo struct {
-	ID       string
-	Task     string
-	Complete bool
+	ID       string `json:"id"`
+	Task     string `json:"task"`
+	Complete bool   `json:"complete"`
 }
 
 var todolist []todo

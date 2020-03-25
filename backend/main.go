@@ -22,6 +22,8 @@ func main() {
 	router.DELETE("/todos/", handleDeleteRequest)
 	router.DELETE("/todos/:uuid", handleDeleteRequestEx)
 
-	handler := cors.Default().Handler(router)
+	handler := cors.New(cors.Options{
+		AllowedMethods: []string{http.MethodGet, http.MethodPost, http.MethodPatch, http.MethodDelete},
+	}).Handler(router)
 	log.Fatal(http.ListenAndServe(":9999", handler))
 }

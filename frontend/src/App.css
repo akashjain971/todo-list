@@ -1,18 +1,22 @@
 .app {
-  background: #209cee;
+  background: powderblue;
   padding: 30px;
   height: 100vh;
 }
 
+p {
+  font-size: medium;
+}
+
 .todo-list {
-  background: #e8e8e8;
+  background: powderblue;
   border-radius: 4px;
   padding: 5px;
   max-width: 400px;
 }
 
 .todo {
-  background: #fff;
+  background: whitesmoke;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   padding: 3px 10px;
   font-size: 12px;

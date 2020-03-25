@@ -12,6 +12,7 @@ function TodoForm(props) {
 
     const inputStyle = {
         width: "75%",
+        fontSize: "large",
         boxSizing: "border-box"
     }
 
@@ -19,7 +20,7 @@ function TodoForm(props) {
         <form onSubmit={handleSubmit}>
             <input
                 type="text"
-                maxLength="25"
+                maxLength="30"
                 className="input"
                 value={value}
                 style={inputStyle}
