@@ -1,25 +1,40 @@
-# todo-list
+# Todo List
 
-A simple API driven task list.
+A simple API driven todo list.
 
-The tasks are stored in memory and does not persist in any database.
+Frontend: React
 
-Maintains tasks as complete or pending.
+Backend: Golang
+
+Database: NONE(persisted in memory on the backend)
+
 
 ## GET /todos
-Retrieve all items of the list as "complete" or "pending".
+Retrieve all tasks.
 
-## GET /todos/\<task\>
-Retrieve the status of the \<task\>
+Returns 200 or 500.
 
-## POST /todos/\<task\>
-Add task to the pending list
+## GET /todos/uuid
+Retrieve the task with uuid.
 
-## PATCH /todos/\<task\>
-Flips the status of the \<task\>
+Returns 200 or 500 or 404.
+
+## POST /todos
+Add task to the pending list. Provide task in the request body. Returns the uuid for the newly added task.
+
+Returns 200.
+
+## PATCH /todos/uuid
+Toggles the status of the task with uuid.
+
+Returns 200 or 404.
 
 ## DELETE /todos
-Clears the task list
+Clears the entire task list.
 
-## DELETE /todos/\<task\>
-Removes the \<task\> from the task list
+Returns 200.
+
+## DELETE /todos/uuid
+Removes the task with uuid from the task list.
+
+Returns 200 or 404.
